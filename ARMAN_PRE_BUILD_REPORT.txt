@@ -1,0 +1,1702 @@
+ARMAN PRE-BUILD REPORT
+======================
+
+Audit status: Complete
+Files modified: None
+Files deleted: None
+Packages installed: None
+Database migrations run: None
+Workflows started: None
+
+The repository was inspected read-only, including all available project files
+and the complete attached_assets/ directory.
+
+
+A. CURRENT PROJECT STATUS
+-------------------------
+
+The repository is currently an empty project shell containing:
+
+- .replit
+- attached_assets/
+- Three PNG assets
+- One complete ARMAN specification/prompt file
+
+The current .replit file only maps local port 8080 to external port 80.
+
+There is no application source code, package configuration, database schema,
+workflow, build system, or implementation to preserve.
+
+The current project is therefore not runnable as ARMAN.
+
+
+B. EXISTING TECHNOLOGIES
+------------------------
+
+Present in the repository:
+
+No application framework or programming-language project is currently present.
+
+Absent:
+
+- Flutter project
+- Dart project
+- Go module
+- Python project
+- Vue/Vite project
+- PostgreSQL schema
+- Redis configuration
+- OpenSearch configuration
+- Firebase configuration
+- Docker configuration
+- GitHub Actions
+- Android project
+- Admin panel
+- Website
+- API documentation
+- Test suite
+
+Available in the environment:
+
+- Node.js 24.13.0
+- npm 11.6.2
+- pnpm 10.26.1
+- Python 3.13.11
+- PostgreSQL client 16.10
+- Docker CLI 27.5.1
+
+Not installed or not available:
+
+- Flutter
+- Dart executable
+- Go
+- Java/JDK
+- Gradle
+- Android SDK
+- Android platform tools / ADB
+- Firebase CLI
+- Redis server
+- OpenSearch server
+
+Available installable toolchain options include Dart 3.10, Go 1.25,
+Python 3.11/3.12/3.13, Node.js 24, and a GraalVM Java toolchain.
+
+
+C. EXISTING FUNCTIONALITY
+-------------------------
+
+No existing functionality was found.
+
+Not implemented:
+
+- Startup or splash flow
+- Onboarding
+- Authentication
+- User profiles
+- Home dashboard
+- Search
+- Resources
+- Courses
+- PDF reader
+- Notes
+- Flashcards
+- Mistake book
+- Quizzes
+- Exam simulator
+- AI assistant
+- OCR scanner
+- Community
+- Groups
+- Chat
+- Goals
+- Planner
+- Study timer
+- Analytics
+- Notifications
+- Admin panel
+- Website
+- Privacy controls
+- Fun & Refresh system
+- Offline storage
+- Push notifications
+- Database persistence
+- API communication
+
+There are no fake screens or placeholder features currently present, which is
+positive.
+
+
+D. EXISTING ASSETS
+------------------
+
+The attached assets were inspected.
+
+1. ARMAN LOGO
+
+File:
+attached_assets/file_0000000088788211b2221fe8485e9b98_1788370712491.png
+
+Properties:
+
+- PNG
+- 1254 x 1254
+- RGBA
+- Transparent background
+- Contains the mountain/stylized "A"
+- Rising gold star
+- ARMAN wordmark
+- Arabic/Urdu/Pashto script: ارمان
+- Tagline: Aspire. Learn. Achieve.
+
+This should be treated as the authoritative logo asset.
+
+2. MAIN ARMAN VISUAL/UI BOARD
+
+File:
+attached_assets/file_00000000672c8211acbc28fa08286b2d_1788370712539.png
+
+Properties:
+
+- PNG
+- 1536 x 1024
+- RGB
+
+Contains visual references for:
+
+- Logo usage
+- Navy and gold brand identity
+- Poppins typography
+- Authentication screens
+- Onboarding
+- Home
+- Explore
+- Categories
+- PDF reader
+- AI assistant
+- Scan and solve
+- Quizzes
+- Results
+- Notes
+- Flashcards
+- Mistake book
+- Goals
+- Planner
+- Groups
+- Community
+- Profile
+- Side menu
+- Store/merchandise concepts
+- App download promotion
+
+3. TALL MOBILE PRODUCT BOARD
+
+File:
+attached_assets/file_000000008b308211b860e03232593194_1788370712580.png
+
+Properties:
+
+- PNG
+- 1024 x 1536
+- RGB
+
+Contains mobile references for:
+
+- Onboarding
+- Home
+- Explore
+- Courses
+- AI assistant
+- Community
+- PDF reader
+- MCQ practice
+- Goals and planner
+- Group chat
+- Profile
+- Settings
+- Fun and refresh concepts
+- Branding and product imagery
+
+4. OTHER ASSETS
+
+No other files were found in attached_assets/.
+
+Not present:
+
+- APK files
+- AAB files
+- SVG logo files
+- Font files
+- Firebase files
+- Android launcher icons
+- App store graphics
+- Audio files
+- Video files
+- PDFs
+- JSON fixtures
+- Database dumps
+- Design source files
+
+
+E. EXISTING SPECIFICATIONS
+--------------------------
+
+One specification file was found:
+
+attached_assets/Pasted-PROJECT-ARMAN-TAGLINE-Aspire-Learn-Achieve-ROLE-You-are_1788370677885.txt
+
+It contains 3,752 lines and includes:
+
+- Sections 1–103: core ARMAN product specification
+- Section 104: profile privacy, Fun & Refresh, immersive media, and
+  personalization requirements
+
+No existing Markdown specifications were found.
+
+The specification defines:
+
+- Flutter Android-first mobile application
+- Go REST/WebSocket backend
+- Python FastAPI AI service
+- PostgreSQL
+- Redis
+- OpenSearch-compatible search
+- S3-compatible object storage
+- Firebase Cloud Messaging
+- Vue 3 + Vite JavaScript website
+- Vue 3 + JavaScript admin panel
+- Docker Compose
+- GitHub Actions
+- JWT authentication
+- OAuth architecture
+- Offline support
+- PDF and media viewers
+- AI, OCR, TTS, quizzes, courses, community, chat, planner, analytics,
+  moderation, and gamification
+- Public/private profiles
+- Fun and stress-relief content
+- Content moderation and recommendation controls
+
+CONFLICTS OR DECISIONS REQUIRING CONFIRMATION
+
+1. JWT authentication is explicitly required.
+
+   This is a major architectural decision because ARMAN owns authentication,
+   password hashing, token rotation, account recovery, and OAuth integration.
+
+2. The specification is product-scale rather than MVP-scale.
+
+   It describes a complete ecosystem with dozens of feature domains.
+   Implementation should proceed through vertical phases rather than
+   attempting every feature simultaneously.
+
+3. Fun content sources require rights and policy review.
+
+   The prompt mentions external meme/GIF/audio sites. We should not scrape or
+   redistribute content without confirming API access, licensing, attribution,
+   and moderation requirements.
+
+4. Subscriptions are listed in the database, but no monetization behavior is
+   defined.
+
+   The subscription model should not be implemented until business rules and
+   a payment provider are confirmed.
+
+5. Admin architecture is undecided.
+
+   The specification allows either a separate admin application or a protected
+   section of the website. A separate Vue admin app is cleaner for authorization
+   and deployment boundaries.
+
+6. Voice, video, Apple login, crash reporting, and some Firebase functionality
+   are described as configurable or optional.
+
+   These need explicit scope decisions before their dependencies are added.
+
+
+F. MISSING FUNCTIONALITY
+------------------------
+
+Everything required by the specification is currently missing.
+
+The largest missing areas are:
+
+- All source code
+- All project manifests
+- All runtime setup
+- All application routing
+- All backend services
+- All database models
+- All authentication
+- All API contracts
+- All mobile UI
+- All web UI
+- All admin UI
+- All AI interfaces
+- All storage integration
+- All notification integration
+- All tests
+- All documentation
+- All release configuration
+
+
+G. BROKEN FUNCTIONALITY
+-----------------------
+
+There are no implemented features to test for functional defects.
+
+However, the project is currently non-runnable because:
+
+- .replit points to port 8080, but no server exists
+- No run command is configured
+- No workflow is configured
+- No package manager project exists
+- No Flutter project exists
+- No backend exists
+- No database schema exists
+- No Android configuration exists
+- No build configuration exists
+
+This is an unbuilt project rather than a partially broken implementation.
+
+
+H. PROPOSED FINAL ARCHITECTURE
+------------------------------
+
+The current repository does not support the requested architecture. I
+recommend creating the following structure:
+
+arman/
+├── mobile/
+│   ├── android/
+│   ├── ios/
+│   ├── lib/
+│   │   ├── core/
+│   │   ├── config/
+│   │   ├── theme/
+│   │   ├── routing/
+│   │   ├── network/
+│   │   ├── storage/
+│   │   ├── auth/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── repositories/
+│   │   └── features/
+│   ├── test/
+│   └── pubspec.yaml
+│
+├── backend/
+│   ├── cmd/
+│   ├── internal/
+│   │   ├── auth/
+│   │   ├── users/
+│   │   ├── profiles/
+│   │   ├── resources/
+│   │   ├── courses/
+│   │   ├── subjects/
+│   │   ├── exams/
+│   │   ├── notes/
+│   │   ├── quizzes/
+│   │   ├── flashcards/
+│   │   ├── mistakes/
+│   │   ├── community/
+│   │   ├── groups/
+│   │   ├── chat/
+│   │   ├── goals/
+│   │   ├── planner/
+│   │   ├── analytics/
+│   │   ├── notifications/
+│   │   ├── search/
+│   │   ├── moderation/
+│   │   ├── fun/
+│   │   └── admin/
+│   ├── migrations/
+│   ├── seeds/
+│   ├── config/
+│   ├── middleware/
+│   ├── tests/
+│   └── go.mod
+│
+├── ai/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── services/
+│   │   ├── providers/
+│   │   ├── models/
+│   │   ├── ocr/
+│   │   ├── pdf/
+│   │   ├── embeddings/
+│   │   └── workers/
+│   ├── tests/
+│   └── pyproject.toml
+│
+├── web/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── views/
+│   │   ├── router/
+│   │   ├── stores/
+│   │   ├── services/
+│   │   └── assets/
+│   └── package.json
+│
+├── admin/
+│   ├── src/
+│   └── package.json
+│
+├── contracts/
+│   └── openapi.yaml
+│
+├── infra/
+│   ├── docker/
+│   ├── nginx/
+│   └── docker-compose.yml
+│
+├── docs/
+│   ├── SETUP.md
+│   ├── ARCHITECTURE.md
+│   ├── API.md
+│   ├── DATABASE.md
+│   ├── DEPLOYMENT.md
+│   └── TESTING.md
+│
+├── scripts/
+├── .github/workflows/
+├── .env.example
+├── .gitignore
+└── README.md
+
+SERVICE RESPONSIBILITIES
+
+- Flutter: mobile UI, local state, secure token storage, offline cache,
+  navigation
+- Go: primary API, authentication, authorization, business logic, database
+  access, WebSockets
+- Python: AI, OCR, PDF processing, embeddings, text-to-audio orchestration,
+  background workers
+- PostgreSQL: durable source of truth
+- Redis: caching, rate limiting, queues, WebSocket presence, temporary state
+- OpenSearch: replaceable search/indexing layer
+- S3-compatible storage: private and public files/media
+- Firebase: push notifications and optional crash reporting
+- Vue website: public and authenticated web experience
+- Vue admin: protected moderation and administration
+- OpenAPI: shared API contract, without sharing TypeScript code between
+  platforms
+
+
+I. REQUIRED DEPENDENCIES
+------------------------
+
+No dependencies currently exist. Dependencies should be added per phase, not
+all at once.
+
+FLUTTER
+
+- HTTP client with interceptors: API calls, retries, and token refresh
+- Secure storage: access and refresh tokens
+- State management: separate UI, domain, server, and local state
+- Declarative router: nested routes and deep links
+- Local SQLite-backed storage: offline notes, downloads, flashcards, and sync
+  queue
+- Localization support: English, Urdu, Pashto, and RTL
+- Connectivity detection: offline/online UX
+- Camera/file picker: scanner and uploads, phase-gated
+- PDF viewer: in-app PDF reading and annotations, phase-gated
+- Audio/video player: in-app media and mini-player, phase-gated
+- WebSocket client: chat and live updates, phase-gated
+- Firebase Messaging: push notifications, phase-gated
+
+GO
+
+- PostgreSQL driver and query layer
+- Database migration tool
+- JWT/OAuth libraries
+- Password hashing implementation
+- Redis client
+- WebSocket library
+- S3-compatible storage SDK
+- OpenSearch client
+- Structured logging
+- Request validation
+- Test utilities
+
+The Go standard library should handle HTTP routing where practical to avoid
+unnecessary framework dependency.
+
+PYTHON
+
+- FastAPI
+- Pydantic
+- ASGI server
+- HTTP client
+- PostgreSQL/Redis clients
+- PDF extraction library
+- OCR engine selected after quality and licensing evaluation
+- Background worker system
+- AI provider adapter SDKs only where needed
+
+VUE WEBSITE AND ADMIN
+
+- Vue 3
+- Vite
+- Vue Router
+- Pinia or equivalent state management
+- Plain JavaScript only, as required by the specification
+- No React
+- No TypeScript
+
+LARGE PACKAGES
+
+Large packages for OCR, PDF rendering, media playback, and AI should be
+installed only when their implementation phase begins. No bulk dependency
+installation is justified during the audit phase.
+
+
+J. ENVIRONMENT REQUIREMENTS
+---------------------------
+
+RECOMMENDED PINNED BASELINE
+
+Component                 Current state                 Recommendation
+---------                 -------------                 --------------
+Flutter                   Not installed                 Select and pin a stable
+                                                        Flutter release
+Dart                      Not available as executable   Use the Dart version
+                          Dart 3.10 module available    bundled with Flutter
+Android SDK               Not installed                 Install SDK matching
+                                                        selected Flutter/AGP
+JDK                       Not installed                 JDK 17 LTS conservative
+Gradle                    Not installed                 Use generated wrapper
+Go                        Not installed                 Go 1.25 is available
+Python                    3.13.11 available             Python 3.12 recommended
+Node.js                   24.13.0                       Suitable for Vue/Vite
+PostgreSQL                Client 16.10 available        PostgreSQL 16 recommended
+Redis                     Not installed                 Redis 7-compatible service
+OpenSearch                Not installed                 OpenSearch-compatible
+Docker                    CLI available                 Verify daemon and Compose
+Firebase CLI              Not installed                 Required during setup
+ADB                       Not installed                 Required for Android tests
+
+ANDROID REQUIREMENTS
+
+Must be selected and documented before implementation:
+
+- Minimum Android API level
+- Target Android API level
+- Compile SDK
+- Flutter version
+- Android Gradle Plugin version
+- Gradle version
+- JDK version
+- Application ID
+- Signing configuration
+
+Provisional application ID:
+
+app.arman.student
+
+This must be confirmed before release configuration.
+
+ENVIRONMENT VARIABLES
+
+The specification requires placeholders for:
+
+DATABASE_URL
+REDIS_URL
+JWT_SECRET
+JWT_REFRESH_SECRET
+STORAGE_ENDPOINT
+STORAGE_BUCKET
+STORAGE_ACCESS_KEY
+STORAGE_SECRET_KEY
+FIREBASE_PROJECT_ID
+FIREBASE_PRIVATE_KEY
+FIREBASE_CLIENT_EMAIL
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+AI_PROVIDER
+AI_API_KEY
+OPENSEARCH_URL
+CORS_ORIGINS
+
+Additional likely variables:
+
+API_BASE_URL
+EMAIL_PROVIDER configuration
+PUBLIC_APP_URL
+WEBSITE_URL
+ADMIN_URL
+S3_REGION
+S3_PUBLIC_BASE_URL
+FIREBASE_STORAGE configuration if used
+
+A SESSION_SECRET is available in the environment, but it should not
+automatically be reused as the JWT or refresh-token secret without an explicit
+security decision.
+
+
+K. DATABASE PLAN
+----------------
+
+PostgreSQL should be the source of truth. Use UUIDs, foreign keys, timestamps,
+indexes, constraints, and migrations consistently.
+
+IDENTITY AND ACCESS
+
+- users
+- profiles
+- roles
+- permissions
+- user_roles
+- role_permissions
+- sessions
+- refresh_tokens
+- oauth_accounts
+- email_verifications
+- password_resets
+- user_privacy_settings
+- profile_section_visibility
+
+ACADEMIC TAXONOMY
+
+- categories
+- subjects
+- institutions
+- exams
+- courses
+- course_modules
+- chapters
+- lessons
+- lesson_progress
+
+RESOURCES AND FILES
+
+- resources
+- resource_files
+- resource_tags
+- tags
+- resource_views
+- resource_downloads
+- resource_ratings
+- resource_comments
+- bookmarks
+- media_assets
+- media_playback_progress
+
+NOTES AND STUDY MATERIAL
+
+- note_folders
+- notes
+- note_attachments
+- note_tags
+- flashcard_decks
+- flashcards
+- flashcard_reviews
+- mistakes
+
+QUESTIONS, QUIZZES, AND EXAMS
+
+- questions
+- mcqs
+- question_options
+- quizzes
+- quiz_questions
+- quiz_attempts
+- quiz_answers
+- exam_attempts
+- exam_answers
+- past_papers
+
+GOALS AND ANALYTICS
+
+- goals
+- goal_subjects
+- goal_milestones
+- study_sessions
+- study_plans
+- study_plan_items
+- analytics_events
+- user_streaks
+- xp_events
+- achievements
+- user_achievements
+- leaderboards
+
+COMMUNITY AND CHAT
+
+- posts
+- post_attachments
+- comments
+- likes
+- follows
+- follow_requests
+- groups
+- group_members
+- group_posts
+- group_files
+- conversations
+- conversation_members
+- messages
+- message_reactions
+- message_reads
+- blocks
+- mutes
+
+NOTIFICATIONS AND SAFETY
+
+- notifications
+- notification_preferences
+- device_tokens
+- reports
+- moderation_actions
+- educator_verifications
+- audit_logs
+
+FUN AND REFRESH
+
+- fun_content
+- fun_content_categories
+- fun_content_tags
+- fun_content_interactions
+- fun_content_reports
+- fun_content_preferences
+- user_moods
+- user_recommendation_preferences
+
+CONSTRAINTS AND INDEXES
+
+Important constraints:
+
+- Unique email and username
+- Unique membership and follow relationships
+- Foreign keys with deliberate delete behavior
+- Valid enum/status values
+- Non-negative counters
+- Valid score and percentage ranges
+- Unique active refresh token identifiers
+- Unique progress record per user/content pair
+
+Important indexes:
+
+- User email, username, and status
+- Resource subject, type, language, exam, year, and moderation status
+- Course/module/lesson ordering
+- Notes by owner, folder, archive, and update time
+- Posts and comments by creation time
+- Messages by conversation and creation time
+- Notifications by recipient and read status
+- Reports by status and created time
+- Privacy visibility fields
+- Search synchronization status
+- Fun content category, language, status, priority, and schedule
+
+SOFT DELETION AND AUDIT
+
+Use soft deletion for:
+
+- Users
+- Profiles
+- Resources
+- Posts
+- Comments
+- Groups
+- Messages where legally and technically appropriate
+- Fun content
+
+Keep moderation and audit records append-only. Sensitive administrative
+actions must record actor, target, action, reason, request ID, timestamp, and
+relevant before/after metadata.
+
+No destructive migrations should be created during this audit.
+
+
+L. API PLAN
+------------
+
+Base path:
+
+/api/v1/
+
+Use a consistent response envelope:
+
+{
+  "success": true,
+  "data": {},
+  "message": null,
+  "error": null
+}
+
+Use cursor pagination consistently for feeds, messages, search, resources,
+comments, notifications, and leaderboards.
+
+AUTHENTICATION
+
+POST   /auth/register
+POST   /auth/login
+POST   /auth/logout
+POST   /auth/refresh
+POST   /auth/verify-email
+POST   /auth/forgot-password
+POST   /auth/reset-password
+POST   /auth/change-password
+GET    /auth/me
+GET    /auth/oauth/:provider
+
+USERS AND PROFILES
+
+GET    /users/:id
+PATCH  /users/me
+DELETE /users/me
+GET    /profiles/:username
+PATCH  /profiles/me
+GET    /profiles/:id/courses
+GET    /profiles/:id/resources
+GET    /profiles/:id/posts
+GET    /profiles/:id/followers
+GET    /profiles/:id/following
+GET    /profiles/:id/achievements
+GET    /profiles/me/privacy
+PATCH  /profiles/me/privacy
+POST   /users/:id/follow
+DELETE /users/:id/follow
+POST   /users/:id/block
+DELETE /users/:id/block
+
+All profile and content visibility must be enforced server-side.
+
+ACADEMIC CONTENT
+
+GET    /categories
+GET    /subjects
+GET    /exams
+GET    /institutions
+GET    /courses
+POST   /courses
+GET    /courses/:id
+PATCH  /courses/:id
+GET    /courses/:id/modules
+GET    /lessons/:id
+POST   /lessons/:id/progress
+
+RESOURCES
+
+GET    /resources
+POST   /resources
+GET    /resources/:id
+PATCH  /resources/:id
+DELETE /resources/:id
+POST   /resources/:id/bookmark
+DELETE /resources/:id/bookmark
+POST   /resources/:id/like
+POST   /resources/:id/rate
+POST   /resources/:id/report
+POST   /uploads/presign
+POST   /resources/:id/publish
+GET    /resources/:id/download
+
+NOTES, FLASHCARDS, AND MISTAKES
+
+GET/POST/PATCH/DELETE /notes
+GET/POST/PATCH/DELETE /note-folders
+GET/POST/PATCH/DELETE /flashcard-decks
+GET/POST/PATCH/DELETE /flashcards
+POST   /flashcards/:id/review
+GET/POST/PATCH/DELETE /mistakes
+POST   /mistakes/revision-session
+
+QUIZZES AND EXAMS
+
+GET/POST/PATCH/DELETE /quizzes
+GET    /quizzes/:id
+POST   /quizzes/:id/start
+POST   /quizzes/:id/attempts
+PATCH  /attempts/:id
+POST   /attempts/:id/finish
+GET    /attempts/:id/results
+GET/POST /exam-attempts
+GET    /past-papers
+
+GOALS, PLANNER, TIMER, AND ANALYTICS
+
+GET/POST/PATCH/DELETE /goals
+GET    /goals/:id
+GET/POST/PATCH/DELETE /study-plans
+GET    /planner/calendar
+POST   /study-sessions
+PATCH  /study-sessions/:id
+GET    /analytics/overview
+GET    /analytics/study-time
+GET    /analytics/performance
+GET    /achievements
+GET    /leaderboards
+
+COMMUNITY, GROUPS, AND CHAT
+
+GET/POST /posts
+GET     /posts/:id
+PATCH/DELETE /posts/:id
+GET/POST /posts/:id/comments
+POST    /posts/:id/like
+GET/POST /groups
+GET     /groups/:id
+POST    /groups/:id/join
+POST    /groups/:id/leave
+GET     /groups/:id/members
+GET/POST /groups/:id/posts
+GET     /conversations
+POST    /conversations
+GET     /conversations/:id/messages
+POST    /conversations/:id/messages
+WS      /api/v1/ws
+
+WebSocket authorization must be performed during connection and per
+subscription/action.
+
+NOTIFICATIONS AND SEARCH
+
+GET    /notifications
+PATCH  /notifications/:id/read
+GET    /notification-preferences
+PATCH  /notification-preferences
+POST   /devices
+DELETE /devices/:id
+GET    /search
+GET    /search/recent
+DELETE /search/recent
+
+AI
+
+POST   /ai/chats
+GET    /ai/chats
+PATCH  /ai/chats/:id
+DELETE /ai/chats/:id
+POST   /ai/chats/:id/messages
+POST   /ai/explain
+POST   /ai/summarize
+POST   /ai/generate-mcqs
+POST   /ai/generate-flashcards
+POST   /ai/solve
+POST   /ai/translate
+POST   /ai/revision-notes
+POST   /ai/pdf-question
+POST   /ai/scan
+POST   /ai/text-to-audio
+
+ADMIN
+
+GET    /admin/dashboard
+GET    /admin/users
+PATCH  /admin/users/:id/status
+GET    /admin/resources/pending
+POST   /admin/resources/:id/approve
+POST   /admin/resources/:id/reject
+GET    /admin/reports
+PATCH  /admin/reports/:id
+GET    /admin/moderation-actions
+GET    /admin/educators
+POST   /admin/educators/:id/verify
+GET    /admin/fun-content
+POST   /admin/fun-content
+PATCH  /admin/fun-content/:id
+DELETE /admin/fun-content/:id
+GET    /admin/audit-logs
+GET    /admin/analytics
+
+Every admin endpoint requires authenticated server-side admin authorization.
+
+
+M. FLUTTER SCREEN AND NAVIGATION PLAN
+--------------------------------------
+
+ROOT NAVIGATION
+
+/splash
+/onboarding
+/auth/login
+/auth/register
+/auth/forgot-password
+/auth/reset-password
+/auth/verification
+/app
+
+The authenticated app uses five primary destinations:
+
+/app/home
+/app/explore
+/app/create
+/app/community
+/app/profile
+
+AI should be globally accessible from the app shell without replacing the
+main navigation.
+
+STARTUP AND AUTHENTICATION
+
+- Splash
+- Onboarding
+- Login
+- Registration
+- Forgot password
+- Reset password
+- Email verification
+- Session-expired flow
+
+Data: authentication/session APIs
+States: loading, validation errors, network error, success
+Actions: login, register, verify, retry, logout
+
+HOME AND EXPLORATION
+
+- Home dashboard
+- Universal search
+- Search results
+- Explore
+- Category
+- Resource details
+- Saved items
+- Downloads
+- Notifications
+
+Data: dashboard summary, resources, courses, goals, recent activity, and
+notifications
+States: loading skeleton, empty recommendations, error with retry
+Actions: open, save, download, share, search, filter
+
+LEARNING
+
+- Courses
+- Course details
+- Module/chapter list
+- Lesson
+- Past papers
+- MCQ practice
+- Quiz setup
+- Quiz
+- Quiz results
+- Exam simulator
+- Exam results
+
+Data: course progress, questions, attempts, and scores
+Actions: start, answer, finish, review, save progress, and resume
+Special behavior: active exam state must survive interruption.
+
+PERSONAL STUDY
+
+- Notes
+- Note editor
+- Flashcards
+- Flashcard deck
+- Mistake book
+- Goals
+- Goal details
+- Study planner
+- Study timer
+- Analytics
+- Achievements
+- Leaderboard
+
+Data: user-owned notes, reviews, mistakes, goals, study sessions, and
+progress
+Actions: create, edit, archive, review, complete, schedule, and resume
+Offline support is especially important for notes, flashcards, and study
+sessions.
+
+AI AND MEDIA
+
+- AI assistant
+- AI chat
+- Scan and solve
+- Question solver
+- PDF reader
+- Resource reader
+- Audio player
+- Video player
+- Mini-player/minimized reader
+
+Data: AI requests, OCR results, media progress, bookmarks, and annotations
+Actions: explain, solve, summarize, translate, generate, annotate, and resume
+The user must return to the exact prior page, scroll location, timestamp, or
+selected text.
+
+COMMUNITY
+
+- Community feed
+- Post details
+- Create post
+- Groups
+- Group details
+- Group chat
+- Direct chat
+- Teacher/mentor profile
+
+Data: feed, posts, comments, follows, groups, messages, and permissions
+Actions: create, like, comment, follow, join, leave, report, mute, and block
+Feeds and messages must paginate.
+
+PROFILE AND SETTINGS
+
+- Profile
+- Edit profile
+- Privacy
+- Settings
+- Notifications
+- Appearance
+- Language
+- Downloads
+- Help
+- About ARMAN
+
+Data: profile, visibility settings, preferences, and devices
+Actions: update privacy, theme, language, notification controls, and delete
+account
+
+GLOBAL ROUTE BEHAVIOR
+
+- Protected routes redirect unauthenticated users to login
+- Authenticated users bypass login after valid session restoration
+- Expired access tokens invoke refresh once, then redirect to authentication
+- Deep links resolve to resources, profiles, courses, posts, groups, and shared
+  content
+- Back navigation restores reading position, playback position, selected text,
+  and active study state
+- Android back handling must be tested for nested routes, modals, readers, and
+  active exams
+
+THEME REQUIREMENTS
+
+- Navy: #0D1321
+- Secondary navy: #1E293B
+- Gold: #F5C15A
+- Green: #22C55E
+- Purple: #8B5CF6
+- Light foundation: #F8FAFC
+- Poppins for English
+- Noto Naskh Arabic or Noto Nastaliq Arabic for Arabic/Urdu/Pashto
+
+Support:
+
+- Dark theme
+- Light theme
+- System theme
+- RTL
+- Text scaling
+- Reduced motion
+- Accessible contrast
+
+Every data-driven screen requires loading, success, empty, error, and retry
+states.
+
+
+N. AI ARCHITECTURE
+------------------
+
+Recommended flow:
+
+Flutter
+   |
+   v
+Go API
+   |
+   v
+Python FastAPI AI service
+   |
+   v
+Provider abstraction
+   |
+   v
+Configured AI model/provider
+
+AI SERVICE RESPONSIBILITIES
+
+- Prompt orchestration
+- Model selection
+- Provider fallback
+- Usage limits
+- Request logging without sensitive content
+- OCR
+- PDF text extraction
+- Embeddings
+- Summarization
+- Question solving
+- MCQ generation
+- Flashcard generation
+- Revision notes
+- Translation
+- Text-to-audio orchestration
+- Background jobs
+
+PROVIDER ABSTRACTION
+
+AIProvider:
+
+- generateText
+- streamText
+- embedText
+- moderateContent
+- transcribeOrExtract
+- synthesizeAudio
+
+The mobile application must never contain AI provider credentials.
+
+SAFETY REQUIREMENTS
+
+- Never claim unverified answers are verified
+- Show uncertainty where appropriate
+- Rate-limit AI requests
+- Track usage per user and endpoint
+- Avoid logging private documents and chats unnecessarily
+- Validate uploaded images and documents before processing
+- Make AI features unavailable with a clear configuration state if the provider
+  is not configured
+
+
+O. SECURITY PLAN
+----------------
+
+AUTHENTICATION
+
+- Argon2id or an equally strong password hash
+- Short-lived access tokens
+- Rotating refresh tokens
+- Refresh-token revocation
+- Email verification
+- Password reset tokens with expiry and one-time use
+- OAuth provider accounts stored separately
+- Rate limits and abuse detection for login, registration, and recovery
+- Account deletion with clear data-retention behavior
+
+AUTHORIZATION
+
+- Server-side role and permission checks
+- Roles for user, educator, moderator, admin, and institution roles
+- Resource ownership checks
+- Group membership and moderator checks
+- Profile privacy checks
+- Messaging privacy checks
+- Admin verification on every admin operation
+
+API SECURITY
+
+- Strict request validation
+- Parameterized database queries
+- Secure headers
+- Restricted CORS
+- HTTPS in production
+- Consistent error codes without stack traces
+- Request IDs
+- Rate limiting
+- Idempotency for sensitive operations where appropriate
+
+UPLOAD SECURITY
+
+- Server-side MIME inspection
+- Extension validation
+- File size limits
+- Image/video/PDF validation
+- Generated storage keys
+- No execution of uploaded files
+- Private object storage for private content
+- Signed URLs
+- Malware/content scanning where appropriate
+- Moderation before publication
+
+WEBSOCKET SECURITY
+
+- Authenticate the connection
+- Authorize every conversation/group subscription
+- Enforce message permissions server-side
+- Validate message size and type
+- Rate-limit messages
+- Reconnect safely
+- Do not trust client-provided role data
+
+AI SECURITY
+
+- Provider credentials server-side only
+- No secrets in Flutter, Vue, Git, logs, or assets
+- Per-user usage limits
+- Abuse monitoring
+- Content moderation
+- No private document leakage between users
+
+
+P. TESTING PLAN
+---------------
+
+FLUTTER
+
+- Unit tests for models, validators, formatters, and state logic
+- Repository tests using mocked API responses
+- Secure storage and token refresh tests
+- Widget tests for loading, success, empty, and error states
+- Navigation and redirect tests
+- Offline synchronization tests
+- PDF/media restoration tests
+- RTL and text-scaling tests
+- Android back-navigation tests
+
+GO
+
+- Unit tests for services and authorization
+- Handler tests
+- Repository/database tests
+- Authentication and refresh-token tests
+- Rate-limit tests
+- Upload validation tests
+- WebSocket authorization and reconnect tests
+- Admin permission tests
+- Migration and seed tests
+
+PYTHON
+
+- FastAPI endpoint tests
+- Provider adapter tests
+- Prompt/service tests
+- OCR quality and failure tests
+- PDF extraction tests
+- File validation tests
+- AI timeout and retry tests
+- Usage-limit tests
+
+API INTEGRATION
+
+Test:
+
+- Register -> verify -> login -> home
+- Login -> search -> resource -> bookmark -> download
+- PDF -> select text -> AI explanation
+- Scan -> OCR -> solve
+- Quiz -> attempt -> result -> mistake book
+- Course -> lesson -> completion -> progress
+- Post -> feed -> comment -> like
+- Group -> join -> chat -> share resource
+- Goal -> planner -> study session -> analytics
+- Admin -> report -> moderation action -> audit log
+
+SECURITY TESTS
+
+- Unauthenticated access
+- Cross-user data access
+- Private profile visibility
+- Private resource access
+- Group permission bypass
+- Admin endpoint access
+- Upload abuse
+- SQL injection attempts
+- Rate-limit behavior
+- Token replay and refresh rotation
+- WebSocket authorization
+
+
+Q. RELEASE AND BUILD PLAN
+-------------------------
+
+ANDROID
+
+Provisional application ID:
+
+app.arman.student
+
+App name:
+
+ARMAN
+
+Required release configuration:
+
+- Version name
+- Version code
+- App icon
+- Adaptive icon
+- Foreground/background assets
+- Splash screen
+- Debug build
+- Release APK
+- Release AAB
+- ProGuard/R8 rules where needed
+- Production API URL
+- Firebase Android configuration
+- Permission review
+
+PERMISSIONS
+
+Request only when features are enabled:
+
+- Internet
+- Camera
+- Notifications
+- Media/storage access where required
+- Microphone only for voice functionality
+
+Permissions must be explained before requesting them.
+
+SIGNING
+
+- Do not generate or overwrite signing keys during the audit
+- Do not commit keystores or passwords
+- Store signing values through secure environment configuration
+- Document release signing setup
+- Verify signing before producing release artifacts
+
+RELEASE GATES
+
+- Debug APK builds
+- Release APK builds
+- AAB builds
+- Authentication works
+- API and database work
+- Offline states work
+- Dark/light themes work
+- RTL works
+- No overflow is present
+- No placeholder behavior remains
+- Permissions are justified
+- Production secrets are not in source control
+- Critical user journeys pass
+
+No APK or AAB can currently be built because the Android and Flutter projects
+do not exist.
+
+
+R. CLEANUP PLAN
+---------------
+
+No files should be deleted during the audit.
+
+After implementation begins, cleanup should include:
+
+- Remove generated APK/AAB files only after confirming they are not needed
+- Exclude build/
+- Exclude .dart_tool/
+- Exclude .gradle/
+- Exclude node_modules/
+- Exclude Python caches and virtual environments
+- Exclude .env and local secrets
+- Keep .env.example
+- Keep authoritative logo and mockup assets
+- Avoid duplicate copies of the logo
+- Avoid checked-in generated files unless explicitly required
+- Remove temporary exports and debug artifacts
+- Review unused dependencies after each major phase
+- Never delete source code or required build configuration without confirmation
+
+A .gitignore file does not currently exist and will be required before
+implementation.
+
+
+S. EXTERNAL CREDENTIALS AND SERVICES REQUIRED
+----------------------------------------------
+
+No external integrations are currently added.
+
+Required or likely required services:
+
+1. PostgreSQL
+
+   Development and production database, connection URL, and backup/restore
+   configuration.
+
+2. Redis
+
+   Cache, rate limiting, queue support, and WebSocket presence.
+
+3. OpenSearch
+
+   Search indexing, endpoint, and credentials.
+
+4. S3-compatible object storage
+
+   Bucket, endpoint, region, access key, secret key, and optional CDN.
+
+5. Firebase
+
+   Firebase project, Android app registration, google-services.json, Firebase
+   Cloud Messaging, and optional crash/error reporting.
+
+6. AI provider
+
+   Server-side provider configuration, provider credentials or managed AI
+   integration, model selection, and usage limits.
+
+7. Email delivery
+
+   Email verification, password reset, and security notifications.
+
+8. Google OAuth
+
+   Client ID, client secret, and redirect configuration.
+
+9. Apple authentication
+
+   Required only if Apple login is included in the Android/iOS roadmap.
+
+10. GitHub
+
+   Repository and GitHub Actions configuration, including deployment secrets
+   if CI/CD is used.
+
+11. Media/content providers
+
+   Meme/GIF/audio providers may be used only with confirmed API access,
+   licensing, attribution, and moderation rights. Do not scrape external
+   websites by default.
+
+No credentials should be pasted into chat or committed to the repository.
+
+
+T. RECOMMENDED IMPLEMENTATION PHASES
+------------------------------------
+
+PHASE 0 — RESOLVE DECISIONS AND BOOTSTRAP
+
+- Confirm JWT ownership versus managed authentication
+- Confirm MVP scope and release priorities
+- Select Flutter/Dart, Go, Python, Android, and JDK versions
+- Confirm application ID
+- Confirm PostgreSQL, Redis, OpenSearch, storage, Firebase, AI, and email
+  providers
+- Create repository structure and documentation baseline
+
+PHASE 1 — CORE PLATFORM
+
+- Flutter shell
+- Go API
+- Python service
+- PostgreSQL migrations
+- Redis
+- Environment configuration
+- Health/readiness endpoints
+- OpenAPI contract
+- Logging and request IDs
+- Docker development setup
+
+PHASE 2 — BRAND, STARTUP, AND AUTHENTICATION
+
+- ARMAN theme
+- Logo and splash
+- Onboarding
+- Login/register
+- Verification and password recovery
+- Session persistence
+- Central routing
+- Profile foundation
+- Privacy foundation
+
+PHASE 3 — HOME, EXPLORE, SEARCH, AND RESOURCES
+
+- Home dashboard
+- Categories
+- Search
+- Resource library
+- Resource details
+- Upload pipeline
+- Bookmarks/downloads
+- Storage and signed URLs
+
+PHASE 4 — LEARNING TOOLS
+
+- Courses and lessons
+- PDF reader
+- Notes
+- Flashcards
+- Mistake book
+- Past papers
+- MCQs and quizzes
+- Exam simulator
+
+PHASE 5 — AI AND SCANNER
+
+- AI chat
+- Question solver
+- OCR
+- Scan and solve
+- PDF AI actions
+- Flashcard/quiz generation
+- Usage limits
+- Provider abstraction
+
+PHASE 6 — GOALS AND PERFORMANCE
+
+- Goals
+- Planner
+- Study timer
+- Study sessions
+- Analytics
+- Achievements
+- XP and leaderboards
+
+PHASE 7 — COMMUNITY AND COMMUNICATION
+
+- Feed
+- Posts and comments
+- Follows
+- Groups
+- Direct chat
+- Group chat
+- WebSockets
+- Notifications
+
+PHASE 8 — FUN & REFRESH AND IMMERSIVE MEDIA
+
+- Profile visibility completion
+- Fun content model
+- Moderation
+- Mood preferences
+- Recommendations
+- Popup controls
+- Audio/video players
+- Mini-player
+- Navigation restoration
+- Reduced-motion support
+
+PHASE 9 — WEBSITE AND ADMIN
+
+- Vue website
+- Public SEO pages
+- Authenticated web flows
+- Vue admin panel
+- Moderation
+- Educator verification
+- Content management
+- Audit logs
+- Admin analytics
+
+PHASE 10 — HARDENING AND RELEASE
+
+- Full tests
+- Security testing
+- Performance testing
+- Offline synchronization testing
+- Accessibility testing
+- Android device testing
+- Debug APK
+- Release APK
+- AAB
+- Deployment documentation
+- Backup/recovery documentation
+
+
+FINAL DECISION
+--------------
+
+READY TO BUILD: NO
+
+Implementation should not begin yet because:
+
+1. The repository has no application source code or project scaffolding.
+2. Flutter, Android SDK, JDK, Gradle, and Go are not currently installed.
+3. Flutter/Dart, Go, Python, Android, and JDK versions must be pinned.
+4. The first release scope must be confirmed because the specification covers
+   a very large ecosystem.
+5. JWT authentication ownership and OAuth behavior must be confirmed.
+6. Database, Redis, OpenSearch, object storage, Firebase, email, and AI
+   provider choices must be confirmed.
+7. The application ID must be confirmed.
+8. External media licensing and moderation rules must be confirmed before using
+   meme/GIF/audio sources.
+9. The admin application structure must be confirmed.
+10. Development and production environment boundaries must be defined.
+
+The mandatory audit is complete. No implementation should start until explicit
+approval is provided with:
+
+START BUILD

@@ -1,0 +1,14 @@
+{
+  "name": "arman",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --filter @arman/web dev",
+    "build:web": "pnpm --filter @arman/web build",
+    "dev:ai": "python3 -m uvicorn ai.app.main:app --host 0.0.0.0 --port 8000",
+    "format": "prettier --write \"web/**/*.{js,vue,css}\" \"*.json\"",
+    "check": "pnpm run build:web"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

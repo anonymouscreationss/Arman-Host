@@ -1,0 +1,315 @@
+openapi: 3.1.0
+info:
+  title: ARMAN API
+  version: 0.1.0
+  description: Versioned API contract for the ARMAN student ecosystem.
+servers:
+  - url: /
+tags:
+  - name: System
+  - name: Auth
+  - name: Profile
+  - name: Resources
+paths:
+  /api/v1/health:
+    get:
+      tags: [System]
+      operationId: getHealth
+      responses:
+        "200":
+          description: API health status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Envelope"
+  /api/v1/ready:
+    get:
+      tags: [System]
+      operationId: getReadiness
+      responses:
+        "200":
+          description: Service readiness
+        "503":
+          description: Dependency unavailable
+  /api/v1/auth/register:
+    post:
+      tags: [Auth]
+      operationId: register
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterRequest"
+      responses:
+        "201":
+          description: User registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+        "409":
+          description: Email or username already exists
+  /api/v1/auth/login:
+    post:
+      tags: [Auth]
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        "200":
+          description: Authenticated session
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+        "401":
+          description: Invalid credentials
+  /api/v1/auth/refresh:
+    post:
+      tags: [Auth]
+      operationId: refreshSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refreshToken]
+              properties:
+                refreshToken: { type: string }
+      responses:
+        "200":
+          description: Refreshed access token
+        "401":
+          description: Invalid refresh token
+  /api/v1/auth/me:
+    get:
+      tags: [Auth]
+      operationId: getCurrentUser
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserResponse"
+        "401":
+          description: Unauthorized
+  /api/v1/profiles/me:
+    get:
+      tags: [Profile]
+      operationId: getMyProfile
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Current profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProfileResponse"
+    patch:
+      tags: [Profile]
+      operationId: updateMyPrivacy
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                visibility: { type: string, enum: [public, private] }
+                showStatistics: { type: boolean }
+                showAchievements: { type: boolean }
+                allowMessages: { type: boolean }
+      responses:
+        "200":
+          description: Updated profile
+  /api/v1/bookmarks:
+    get:
+      tags: [Resources]
+      operationId: listBookmarks
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Current user's saved resources
+  /api/v1/resources/{id}:
+    get:
+      tags: [Resources]
+      operationId: getResource
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        "200":
+          description: Resource detail
+        "404":
+          description: Resource not found
+  /api/v1/resources/{id}/bookmark:
+    post:
+      tags: [Resources]
+      operationId: bookmarkResource
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        "204":
+          description: Resource saved
+    delete:
+      tags: [Resources]
+      operationId: removeBookmark
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        "204":
+          description: Resource unsaved
+  /api/v1/resources:
+    get:
+      tags: [Resources]
+      operationId: listResources
+      parameters:
+        - name: subject
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 20
+        - name: cursor
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Paginated resources
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResourceListResponse"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Envelope:
+      type: object
+      required: [success, data, message, error]
+      properties:
+        success:
+          type: boolean
+        data: {}
+        message:
+          type: [string, "null"]
+        error:
+          type: [object, "null"]
+          additionalProperties: true
+    RegisterRequest:
+      type: object
+      required: [name, username, email, password]
+      properties:
+        name: { type: string, minLength: 2, maxLength: 120 }
+        username: { type: string, pattern: "^[a-zA-Z0-9_]{3,30}$" }
+        email: { type: string, format: email }
+        password: { type: string, minLength: 10, maxLength: 128 }
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, minLength: 1 }
+    User:
+      type: object
+      required: [id, name, username, email]
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        username: { type: string }
+        email: { type: string, format: email }
+    Profile:
+      type: object
+      required: [user, bio, visibility]
+      properties:
+        user: { $ref: "#/components/schemas/User" }
+        bio: { type: string }
+        visibility:
+          type: string
+          enum: [public, private]
+        studyInterests:
+          type: array
+          items: { type: string }
+    Resource:
+      type: object
+      required: [id, title, type, subject, moderationStatus]
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        description: { type: string }
+        type: { type: string }
+        subject: { type: string }
+        moderationStatus: { type: string }
+        fileUrl: { type: [string, "null"], format: uri }
+        thumbnailUrl: { type: [string, "null"], format: uri }
+    AuthResponse:
+      allOf:
+        - $ref: "#/components/schemas/Envelope"
+        - type: object
+          properties:
+            data:
+              type: object
+              required: [user, accessToken, refreshToken]
+              properties:
+                user: { $ref: "#/components/schemas/User" }
+                accessToken: { type: string }
+                refreshToken: { type: string }
+    UserResponse:
+      allOf:
+        - $ref: "#/components/schemas/Envelope"
+        - type: object
+          properties:
+            data: { $ref: "#/components/schemas/User" }
+    ProfileResponse:
+      allOf:
+        - $ref: "#/components/schemas/Envelope"
+        - type: object
+          properties:
+            data: { $ref: "#/components/schemas/Profile" }
+    ResourceListResponse:
+      allOf:
+        - $ref: "#/components/schemas/Envelope"
+        - type: object
+          properties:
+            data:
+              type: object
+              required: [items, nextCursor]
+              properties:
+                items:
+                  type: array
+                  items: { $ref: "#/components/schemas/Resource" }
+                nextCursor: { type: [string, "null"] }
